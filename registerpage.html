@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>LINE Retail Society</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PW7HPDW');</script>
+  <!-- End Google Tag Manager -->
+  <link href="./img/favicom.ico" rel="icon">
+
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href='css/ekachon.css' rel="stylesheet" type="text/css">
+  <link href='css/button.css' rel="stylesheet" type="text/css">
+  <link href='css/style.css' rel="stylesheet" type="text/css">
+  <link href='css/vdo.css' rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href='css/w3.css' rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="./css/form.css">
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+
+
+  <style type="text/css">
+    @media (min-width: 768px) { margin-left:0px; }
+    .form-control { 
+      text-align: left; font-size: 400 !important; font-size: 12px !important; color:#0056ff;
+      background-color: #f2f4f6;
+    }
+    #timer {
+      max-width:250px;
+      font-size: 17px;
+      font-weight: 600;
+      color: #0056ff;
+      /*text-shadow: 0 0 20px #48C8FF;*/
+    }
+    #timer div {
+      display: inline-block;
+      min-width: 24%;
+    }
+    #timer div span {
+      color: #B1CDF1;
+      display: block;
+      font-size: 10px;
+      font-weight: 400;
+    }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PW7HPDW"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#myPage" onclick="location.href='index.html'">LINE Retail Society</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <center>
+    <div class="col-lg-12">
+      <div class="btn-t3" style="margin:80px auto 0px auto;cursor: default;width:280px;">สมัครใช้งาน LINE Retail Society</div>
+      <div class="subhead-text">คุณจะต้องลงทะเบียนก่อนที่จะเริ่มต้นใช้งาน</div>
+    </div>
+  </center>
+</div>
+
+<div class="container-font" style="margin-top:20px;">
+  <center>
+    <div id="MyProfile"></div>
+  </center>
+  <div class="row-font" style="margin-top:20px;">
+    <div class="header-font">ข้อมูลผู้ขอใช้ระบบงาน</div>
+    <div class="input-group input-group-icon">
+      <input type="number" id="txtEmpID" placeholder="รหัสพนักงาน"/>
+      <div class="input-icon"><i class="fa fa-user-plus"></i></div>
+    </div>
+    <div class="input-group input-group-icon">
+      <input type="text" id="txtEmpName" placeholder="ชื่อ-นามสกุล (ภาษาไทย)"/>
+      <div class="input-icon"><i class="fa fa-user"></i></div>
+    </div>
+    <div class="input-group input-group-icon">
+      <input type="text" id="txtEmpPhone" placeholder="โทรศัพท์"/>
+      <div class="input-icon"><i class="fa fa-phone"></i></div>
+    </div>
+  </div>
+  <div class="row-font">
+    <div class="header-font">ข้อมูลการเป็นพนักงาน</div>
+      <div class="input-group">
+      <select id="txtEmpRH" required/>
+        <option></option>
+        <option value="ttb bank">พนักงาน ttb bank</option>
+        <option value="OTHER-Outsider">บุคคลภายนอกธนาคาร</option>
+      </select>
+    </div>
+  </div>
+  <div class="row-font">
+    <div class="header-font">สังกัดหน่วยงานของคุณ</div>
+      <div class="input-group">
+        <select id="txtEmpBR" required/>
+          <option></option>
+          <option value="RH1">Branch Banking Regional Office 1 - RH1</option>
+          <option value="RH2">Branch Banking Regional Office 2 - RH2</option>
+          <option value="RH3">Branch Banking Regional Office 3 - RH3</option>
+          <option value="RH4">Branch Banking Regional Office 4 - RH4</option>
+          <option value="RH5">Branch Banking Regional Office 5 - RH5</option>
+          <option value="RH6">Branch Banking Regional Office 6 - RH6</option>
+          <option value="RSOC">Retail Strategy and Omni Channel Experience</option>
+          <option value="RASN">Retail Advisory and Sales Network</option>
+          <option value="MLS">Mortgage Loan Sales</option>
+          <option value="WB">Wealth Banking</option>
+          <option value="other">อื่น ๆ</option>
+        </select>
+      </div>
+  </div>
+  <div class="row-font">
+    <div class="header-font">ข้อมูลที่อยู่สำหรับการจัดส่งของรางวัล</div>
+    <div class="input-group">
+      <textarea id="txtEmpAddress" rows="5" placeholder="ที่อยู่สำหรับการรับรางวัล ..."></textarea>
+    </div>
+  </div>
+
+  <div class="row-font">
+    <div class="header-font">ข้อตกลงการขอใช้งาน (ทำเครื่องหมายที่ปุ่ม Checkbox)</div>
+    <div class="input-group">
+      <input type="checkbox" id="txtEmpAccept" onclick="CheckButtomClick()"/>
+      <label for="txtEmpAccept">
+        <ul>
+          <li>ผู้ขออนุญาตใช้ LINE Retail Society จะต้องเป็นพนักงานของ  ttb ภายใต้สังกัด CRBO เท่านั้น</li>
+          <li>ผู้ขออนุญาตใช้งานจะต้องไม่เผยแพร่ข้อมูลข่าวสารนี้ต่อบุคคลภายนอก ttb โดยเด็ดขาด</li>
+          <li>ผู้ดูแลระบบ สามารถทำการยกเลิกการใช้งานได้โดยไม่มีเงื่อนไข</li>
+        </ul>
+      </label>
+      <div class="confirmdate" id="DisplayDateRegister"></div>
+    </div>
+  </div>
+  <center>
+    <div id="SubmitApp" class="btn-t1 disabledbutton" onclick="CheckRegister()" style="margin-top:20px;">ลงทะเบียนใช้งาน</div>
+  </center>
+  </div>
+</div>
+<!-- partial -->
+
+
+<div id="id01" class="w3-modal w3-animate-opacity">
+  <div class="w3-modal-content w3-card-4" style="background-color: #edeeff;">
+    <div class="w3-container" style="min-height:300px;padding:5px 30px;width:100%;text-align:center;max-width: 450px;margin:auto;">
+      <center>
+        <div style="margin-top:35px; color:#0056ff; font-size: 12px; font-weight: 600;">
+          ยินดีต้อนรับสู่<br>LINE Retail Society
+        </div>
+        <div class="icon-text" style="color:#999;text-align: left;"><br>LINE Retail Society เป็นอีกหนึ่งช่องทางสำหรับการสื่อสาร โดยผู้ที่จะขอใช้งาน โดยจะต้องทำการลงทะเบียน และรอการอนุมัติเพื่อให้สามารถเข้าใช้ระบบงานได้ ไปดูกันว่าจะใช้อะไรกันได้บ้าง</div>
+        <div class="clr" style="height: 25px;"></div>
+        <div class="icon-left"><img src="./icon/icon-4.png"></div>
+        <div class="icon-right">การสื่อสาร<div class="icon-text">LINE Retail Society เป็นอีกหนึ่งข่องทางที่จะทำให้การสื่อสารของเรามีความรวดเร็ว และประสิทธิภาพมากยิ่งขึ้น</div></div>
+        <div class="icon-left"><img src="./icon/icon-5.png"></div>
+        <div class="icon-right">กิจกรรม<div class="icon-text">ผู้ใช้งานสามารถที่จะเข้าร่วมกิจกรรมกับ LINE Retail Society ได้ง่าย ๆ เพียงคลิกเลือกเมนูที่เป็นเมนูกิจกรรม เราเตรียมรางวัลไว้ให้คุณมากมาย</div></div>
+        <div class="icon-left"><img src="./icon/icon-1.png"></div>
+        <div class="icon-right">ระบบงาน<div class="icon-text">ผู้ใช้งานสามารถดูข้อมูล ข่าวสาร และสามารถตรวจสอบผลคะแนน การแข่งขัน ตลอดจนการแลกของรางวัลผ่านระบบงาน</div></div>
+        <div class="btn-t2" onclick="CloseAll()" style="margin:10px auto 25px auto;">คลิกเพื่อสมัครใช้งาน</div>
+     </center>
+    </div>
+  </div>
+  <div class="clr" style="height: 70px;"></div>
+</div>
+
+<div id="id02" class="w3-modal w3-animate-opacity" style="z-index: 20;">
+  <div class="w3-modal-content w3-card-4" style="background: #fff;">
+    <div class="w3-container" style="min-height:300px;padding:24px;width:100%;text-align:center;">
+        <div style="text-align:center; color:#000; padding-top:12px;font-weight: 600;">LINE Retail Society</div>
+        <div><img src="./img/confirmpage.gif" style="width:280px;margin:15px auto;"></div>
+        <div style="padding:10px;color:#0056ff;font-size: 11px;">ระบบได้ทำการบันทึกรายการสมัคร<br>เข้าใช้งานของคุณเรียบร้อยแล้ว<br>โปรดรอคอยการอนุมัตืภายใน 24 ชั่วโมง</div>
+        <div class="btn-t2" onclick="GotoHome()" style="margin-top:20px;">ปิดหน้าต่างนี้</div>
+        <div style="height: 15px;"></div>
+      </center>
+    </div>
+  </div>
+  <div style="height:40px;"></div>
+</div>
+
+
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+  <div class="footer-main">
+    @<span class="footer-font-green">LINE</span> 
+    <span class="footer-font-navi">Retail</span> 
+    <span class="footer-font-blue">So</span><span class="footer-font-org">ciety</span>
+  </div>
+</footer>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="./js/registerpage.js"></script>
+
+</body>
+</html>

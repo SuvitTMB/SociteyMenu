@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>LINE Retail Society</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PW7HPDW');</script>
+  <!-- End Google Tag Manager -->
+  <link href="./img/favicom.ico" rel="icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!--
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+-->
+  <link href='css/ekachon.css' rel="stylesheet" type="text/css">
+  <link href='css/button.css' rel="stylesheet" type="text/css">
+  <link href='css/style.css' rel="stylesheet" type="text/css">
+  <link href='css/vdo.css' rel="stylesheet" type="text/css">
+  <link href='css/slideshow.css' rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href='css/w3.css' rel="stylesheet" type="text/css">
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PW7HPDW"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!--
+  <div class="navbar1">
+    <center>
+      <div style="max-width:400px;">
+        <div class="iconlink" onClick="window.location='index.html';" style="background-color: #002d63;">
+          <div style="width:28px;"><img src="./img/start.png" style="width:22px;"></div>
+          <div style="font-size: 11px;">เมนูหลัก</div>
+        </div>
+        <div class="iconlink" onClick="window.location='calendar.html';">
+          <div style="width:28px;"><img src="./img/calendar.png" style="width:22px;"></div>
+          <div style="font-size: 11px;">กำหนดการ</div>
+        </div>
+        <div class="iconlink" onClick="window.location='channel.html';">
+          <div style="width:28px;"><img src="./img/channel.png" style="width:22px;"></div>
+          <div style="font-size: 11px;">ช่องทาง</div>
+        </div>
+        <div class="iconlink" onClick="window.location='memberline.html';">
+          <div style="width:28px;"><img src="./img/line.png" style="width:22px;"></div>
+          <div style="font-size: 11px;">สมาชิก</div>
+        </div>
+      </div>
+    </center>
+  </div>
+-->
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!--
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        -->
+        <a class="navbar-brand" href="index.html">LINE Retail Society</a>
+      </div>
+          <!--
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="home.html">หน้าแรก</a></li>
+          <li><a href="ttb-news.html">ข่าวสาร</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="search.html">ค้นหาสื่อ</a></li>
+        </ul>
+      </div>
+          -->
+    </div>
+  </nav>
+
+<section id="LDP">
+  <div class="slideshow-container">
+    <div class="mySlides fade1">
+      <div class="numbertext">ตรวจสอบผลคะแนน</div>
+      <img src="./slides/slide-2.jpg" style="width:100%">
+      <div class="text" onclick="ClickLink(1)">BA Life Campaign</div>
+    </div>
+    <div class="mySlides fade1">
+      <div class="numbertext">แลกของรางวัล</div>
+      <img src="./slides/slide-1.jpg" style="width:100%">
+      <div class="text" onclick="ClickLink(2)">TNI Redeem Point</div>
+    </div>
+    <div class="mySlides fade1">
+      <div class="numbertext">สื่อวิดีโอ Online</div>
+      <img src="./slides/slide-3.jpg" style="width:100%">
+      <div class="text" onclick="ClickLink(3)">VDO Training</div>
+    </div>
+    <a class="prev1" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next1" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+</section>
+
+
+
+  <section>
+    <div class="container" style="max-width:800px; width:100%;">
+      <div class="row">
+        <center>
+          <div class="col-lg-12">
+            <div class="btn-t3" style="margin:40px auto 0px auto;width:280px;cursor: default;">ระบบงาน LINE Retail Society</div>
+            <div class="subhead-text">คลิกเลือกระบบงานที่ต้องการดูข้อมูล</div>
+          </div>
+        </center>
+        <div class="clr"></div>
+        <div style="width:95%; margin:20px auto 20px 17px;background-color: #ffff00;">
+          <div id="DisplayListWebPage"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <div style="font-size:12px;font-weight: 600;">@<font color="green">LINE</font> <font color="#002d63">Retail</font> 
+    <font color="#0056ff">So</font><font color="#f68b1f">ciety</font></div>
+    <div class="clr" style="height: 40px;"></div>
+</footer>
+
+
+<script src="./js/home.js"></script>
+
+<!--
+<script src="./js/session.js"></script>
+-->
+<div id="id01" class="w3-modal w3-animate-opacity">
+  <div class="w3-modal-content w3-card-4">
+    <div class="w3-container" style="min-height:300px;padding:24px;width:100%;text-align:center;">
+      <div>
+        <center>
+          <div id="DisplayProject"></div>
+        </center>
+      </div>
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    document.getElementById('click1').style.display='none';
+    document.getElementById('click2').style.display='block';
+  } else {
+    x.style.display = "none";
+    document.getElementById('click1').style.display='block';
+    document.getElementById('click2').style.display='none';
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>LINE Retail Society</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PW7HPDW');</script>
+  <!-- End Google Tag Manager -->
+  <link href="./img/favicom.ico" rel="icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href='css/ekachon.css' rel="stylesheet" type="text/css">
+  <link href='css/button.css' rel="stylesheet" type="text/css">
+  <link href='css/style.css' rel="stylesheet" type="text/css">
+  <link href='css/vdo.css' rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href='css/w3.css' rel="stylesheet" type="text/css">
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+  <style type="text/css">
+    @media (min-width: 768px) { margin-left:0px; }
+    .form-control { 
+      text-align: left; font-size: 400 !important; font-size: 12px !important; color:#0056ff;
+      background-color: #f2f4f6;
+    }
+    #timer {
+      max-width:250px;
+      font-size: 17px;
+      font-weight: 600;
+      color: #0056ff;
+      /*text-shadow: 0 0 20px #48C8FF;*/
+    }
+    #timer div {
+      display: inline-block;
+      min-width: 24%;
+    }
+    #timer div span {
+      color: #B1CDF1;
+      display: block;
+      font-size: 10px;
+      font-weight: 400;
+    }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PW7HPDW"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!--
+<div class="navbar1">
+  <center>
+    <div style="max-width:400px;">
+      <div class="iconlink" onClick="window.location='index.html';">
+        <div style="width:28px;"><img src="./img/start.png" style="width:22px;"></div>
+        <div style="font-size: 11px;">เมนูหลัก</div>
+      </div>
+      <div class="iconlink" onClick="window.location='calendar.html';" style="background-color: #002d63;">
+        <div style="width:28px;"><img src="./img/calendar.png" style="width:22px;"></div>
+        <div style="font-size: 11px;">กำหนดการ</div>
+      </div>
+      <div class="iconlink" onClick="window.location='channel.html';">
+        <div style="width:28px;"><img src="./img/channel.png" style="width:22px;"></div>
+        <div style="font-size: 11px;">ช่องทาง</div>
+      </div>
+      <div class="iconlink" onClick="window.location='memberline.html';">
+        <div style="width:28px;"><img src="./img/line.png" style="width:22px;"></div>
+        <div style="font-size: 11px;">สมาชิก</div>
+      </div>
+    </div>
+  </center>
+</div>
+-->
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#myPage" onclick="location.href='index.html'">LINE Retail Society</a>
+    </div>
+  </div>
+</nav>
+
+<main id="detail">
+  <div class="container" style="margin-top:10px;">
+    <center>
+      <div class="col-lg-12">
+        <div class="btn-t3" style="margin:70px auto 0px auto;cursor: default;width:280px;">อยู่ระหว่างการตรวจสอบข้อมูล</div>
+        <div class="subhead-text">เราจะใช้เวลาในการตรวจสอบข้อมูล 24 ชั่วโมง</div>
+      </div>
+    </center>
+    <div class="clr"></div>
+    <div style="width:100%; margin-top:50px auto 10px auto;">
+      <center>
+        <div style="max-width:600px; width:100%;"><img src="./img/waitingpage.gif" style="max-width: 300px;"></div>
+        <div style="margin-top:-30px;color:#f68b1f; font-weight: 600;">เหลือเวลาการรอคอยอีก</div>
+        <div id="timer" style="margin-top:8px;"></div>
+        <a href="mailto:suvit.cha@ttbbank.com&subject=แจ้งขอใช้เปิดใช้ระบบงาน LINE Retail Society เร่งด่วน&body=กรุณาระบุเหตุผลที่ต้องการใช้งาน" style="text-decoration: none;"><div class="btn-t1" style="margin-top:25px;width:280px;">แจ้งเราหากคุณมีความจำเป็น<br>เร่งด่วนที่จะต้องรีบใช้ระบบงาน<br>แจ้ง LINE Reatil Society</div></a>
+      </center>
+    </div>
+    <div class="clr"></div>
+  </div>
+</main>
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+  <div class="footer-main">
+    @<span class="footer-font-green">LINE</span> 
+    <span class="footer-font-navi">Retail</span> 
+    <span class="footer-font-blue">So</span><span class="footer-font-org">ciety</span>
+  </div>
+</footer>
+
+<script src="./js/waitingpage.js"></script>
+
+</body>
+</html>
