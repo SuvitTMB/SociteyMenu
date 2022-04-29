@@ -3,6 +3,7 @@ var CheckFoundData = 0;
 var dateString = new Date().toLocaleString('en-US', { timeZone: 'Asia/Jakarta' });
 const x = document.querySelectorAll(`div.com[min="${i}"]`);
 
+
 $(document).ready(function () {
 
   /*
@@ -19,10 +20,8 @@ $(document).ready(function () {
   $("#MyProfile").html(str);  
   Connect_DB();
   */
-
   main();
 });
-
 
 
 async function main() {
@@ -34,8 +33,18 @@ async function main() {
     liff.login();
   }
 }
+/*
+async function main() {
+  await liff.init({ liffId: "1655966947-KxrAqdyp" });
+  document.getElementById("isLoggedIn").append(liff.isLoggedIn());
+  if(liff.isLoggedIn()) {
+    getUserProfile();
+  } else {
+    liff.login();
+  }
+}
 
-
+*/
 async function getUserProfile() {
   var str = "";
   const profile = await liff.getProfile();
