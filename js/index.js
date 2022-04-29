@@ -6,8 +6,8 @@ const x = document.querySelectorAll(`div.com[min="${i}"]`);
 
 $(document).ready(function () {
 
-  /*
-  sessionStorage.clear();
+/*
+  sessionStorage.clear(); 
   var str = "";
   var sLineID = "Ua6b6bf745bd9bfd01a180de1a05c23b3";
   var sLineName = "Website";
@@ -19,21 +19,15 @@ $(document).ready(function () {
   str += '<div class="NameLine">'+ sessionStorage.getItem("LineName")+'</div>';
   $("#MyProfile").html(str);  
   Connect_DB();
+  //CheckTNIdate();
+  //CheckData();
   */
+
   main();
 });
 
 
-async function main() {
-  await liff.init({ liffId: "1655966947-KxrAqdyp" });
-  document.getElementById("isLoggedIn").append(liff.isLoggedIn());
-  if(liff.isLoggedIn()) {
-    getUserProfile();
-  } else {
-    liff.login();
-  }
-}
-/*
+
 async function main() {
   await liff.init({ liffId: "1655966947-KxrAqdyp" });
   document.getElementById("isLoggedIn").append(liff.isLoggedIn());
@@ -44,7 +38,7 @@ async function main() {
   }
 }
 
-*/
+
 async function getUserProfile() {
   var str = "";
   const profile = await liff.getProfile();
