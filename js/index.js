@@ -26,7 +26,6 @@ $(document).ready(function () {
 
 
 async function main() {
-  alert("main");
   await liff.init({ liffId: "1655966947-KxrAqdyp" });
   document.getElementById("isLoggedIn").append(liff.isLoggedIn());
   if(liff.isLoggedIn()) {
