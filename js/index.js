@@ -19,16 +19,14 @@ $(document).ready(function () {
   str += '<div class="NameLine">'+ sessionStorage.getItem("LineName")+'</div>';
   $("#MyProfile").html(str);  
   Connect_DB();
-  //CheckTNIdate();
-  //CheckData();
-  */
-
+*/  
   main();
 });
 
 
 
 async function main() {
+  alert("main");
   await liff.init({ liffId: "1655966947-KxrAqdyp" });
   document.getElementById("isLoggedIn").append(liff.isLoggedIn());
   if(liff.isLoggedIn()) {
